@@ -1,0 +1,21 @@
+title 0.6: New note
+
+note over browser
+browser executes the event handler
+that creates a new note,
+adds it to notes list, and
+then renders notes to display
+end note
+note right of browser
+{
+  content: "single page app does not reload the whole page",
+  date: "2019-05-25T15:15:59.905Z"
+}
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over server:
+Server parses the data,
+creates new note
+then adds it to notes array.
+end note
+server-->browser: 201 created
