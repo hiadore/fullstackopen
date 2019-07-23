@@ -24,7 +24,8 @@ const App = (props) => {
       <button onClick={setVote}>vote</button>
       <button onClick={() => setSelected(getRandomInt(anecdotes.length))}>next anecdote</button>
       <h1>Anecdote with most votes</h1>
-      {props.anecdotes[Object.keys(points).reduce((a, b) => points[a] > points[b] ? a : b)]}
+      {props.anecdotes[Object.keys(points).reduce((a, b) => points[a] > points[b] ? a : b)]} <br />
+      has {Object.values(points).reduce((a, b) => a > b ? a : b)} votes <br />
     </div>
   )
 }
