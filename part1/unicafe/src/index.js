@@ -4,7 +4,10 @@ import ReactDOM from 'react-dom'
 const Statistic = ({text, value}) => {
   return (
     <>
-      {text} {value} <br />
+      <tr>
+        <td>{text}</td>
+        <td>{value}</td>
+      </tr>
     </>
   )
 }
@@ -23,7 +26,7 @@ const Statistics = ({ good, neutral, bad }) => {
         <Statistic text="bad" value={bad} />
         <Statistic text="all" value={all} />
         <Statistic text="average" value={average} />
-        <Statistic text="positive" value={positive} />
+        <Statistic text="positive" value={positive + " %"} />
       </>
     )
   }
