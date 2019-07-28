@@ -16,7 +16,7 @@ const Content = ({ parts }) => {
   return (
     <>
       {rows()}
-      <p>total of {sum()} exercises</p>
+      <p><b>total of {sum()} exercises</b></p>
     </>
   )
 }
