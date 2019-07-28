@@ -8,9 +8,15 @@ const Content = ({ parts }) => {
       part={part}
     />
   )
+
+  const sum = () => parts.reduce((acc, part) =>
+    acc + part.exercises, 0
+  )
+  
   return (
     <>
       {rows()}
+      <p>total of {sum()} exercises</p>
     </>
   )
 }
